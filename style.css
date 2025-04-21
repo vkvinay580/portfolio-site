@@ -2,6 +2,11 @@
 .navbarScroll.navbarDark {
     background-color: black;
 }
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 .btn {
     display: inline-block;
     background-color: #007bff;
