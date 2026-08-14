@@ -65,10 +65,80 @@
 .portfolioContent {
     height: 100%;
 }
-.portfolio-logo {
+.portfolio-logo-stage {
     height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 28px;
+    overflow: hidden;
     background: #f8f9fa;
+}
+.attica-logo-stage {
+    background: linear-gradient(135deg, #7d1018, #bd2029);
+}
+.portfolio-logo {
+    display: block;
+    width: auto;
+    max-width: 78%;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
+}
+.lehkai-logo {
+    width: 140px;
+    max-width: 55%;
+}
+
+/* skills section */
+.skills-section {
+    margin-top: 4rem;
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
+}
+.section-heading p {
+    color: #667085;
+}
+.section-kicker {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #198754;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1rem;
+}
+.skill-item {
+    display: flex;
+    min-height: 130px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    padding: 1rem;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(16, 24, 40, .04);
+    font-weight: 600;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.skill-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(16, 24, 40, .1);
+}
+.skill-item img {
+    width: 52px;
+    height: 52px;
     object-fit: contain;
 }
 
@@ -92,16 +162,99 @@
     border: 1px solid #008000;
 }
 
-/* social media icons styling */
-.social-icons {
-    font-size: 36px;
-    cursor: pointer;
+/* contact and social links */
+.contact-panel,
+.contact-form {
+    height: 100%;
+    padding: 2rem;
+    border-radius: 16px;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
+.contact-panel {
+    color: #fff;
+    background: linear-gradient(145deg, #0d2d22, #198754);
 }
-.fab {
-    color: #000000;
+.contact-panel .section-kicker {
+    color: #8ce6b7;
+}
+.contact-panel h2 {
+    margin-bottom: 1rem;
+}
+.contact-panel > p {
+    margin-bottom: 1.75rem;
+    color: rgba(255, 255, 255, .8);
+    line-height: 1.7;
+}
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+.contact-detail:hover {
+    color: #fff;
+}
+.contact-detail i {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .13);
+}
+.contact-detail small {
+    display: block;
+    color: rgba(255, 255, 255, .65);
+}
+.contact-form {
+    border: 1px solid #e4e7ec;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(16, 24, 40, .07);
+}
+.contact-form .form-control {
+    padding: .8rem 1rem;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: 2.25rem;
+    flex-wrap: wrap;
+}
+.social-links a {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    color: #344054;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.social-links a:hover {
+    color: #198754;
+    border-color: #198754;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 991.98px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+@media (max-width: 575.98px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .contact-panel,
+    .contact-form {
+        padding: 1.4rem;
+    }
 }
 /* footer styling */
 #footer {
