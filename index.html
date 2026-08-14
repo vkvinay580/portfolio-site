@@ -11,8 +11,7 @@
 		<link rel="stylesheet" href="style.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	</head>
 	<body>
 		<!-- navbar -->
@@ -32,6 +31,9 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#skills">Skills</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#portfolio">Portfolio</a>
@@ -164,6 +166,33 @@
 				</div>
 			</section>
 			
+			<!-- skills section -->
+			<section id="skills" class="skills-section">
+				<div class="container">
+					<div class="section-heading text-center">
+						<span class="section-kicker">Technology stack</span>
+						<h1>Skills &amp; Tools</h1>
+						<p>Technologies I use to design, build, secure, and deploy production-ready software.</p>
+					</div>
+					<div class="skills-grid">
+						<div class="skill-item"><img src="assets/skills/php.svg" alt="PHP logo"><span>PHP</span></div>
+						<div class="skill-item"><img src="assets/skills/python.svg" alt="Python logo"><span>Python</span></div>
+						<div class="skill-item"><img src="assets/skills/java.svg" alt="Java logo"><span>Java</span></div>
+						<div class="skill-item"><img src="assets/skills/kotlin.svg" alt="Kotlin logo"><span>Kotlin</span></div>
+						<div class="skill-item"><img src="assets/skills/javascript.svg" alt="JavaScript logo"><span>JavaScript</span></div>
+						<div class="skill-item"><img src="assets/skills/laravel.svg" alt="Laravel logo"><span>Laravel</span></div>
+						<div class="skill-item"><img src="assets/skills/react.svg" alt="React logo"><span>React</span></div>
+						<div class="skill-item"><img src="assets/skills/nodejs.svg" alt="Node.js logo"><span>Node.js</span></div>
+						<div class="skill-item"><img src="assets/skills/flutter.svg" alt="Flutter logo"><span>Flutter</span></div>
+						<div class="skill-item"><img src="assets/skills/aws.svg" alt="Amazon Web Services logo"><span>AWS</span></div>
+						<div class="skill-item"><img src="assets/skills/mysql.svg" alt="MySQL logo"><span>MySQL</span></div>
+						<div class="skill-item"><img src="assets/skills/docker.svg" alt="Docker logo"><span>Docker</span></div>
+						<div class="skill-item"><img src="assets/skills/git.svg" alt="Git logo"><span>Git</span></div>
+						<div class="skill-item"><img src="assets/skills/linux.svg" alt="Linux logo"><span>Linux</span></div>
+					</div>
+				</div>
+			</section>
+
 			<!-- portfolio section-->
 			<section id="portfolio">
 				<div class="container mt-3">
@@ -249,7 +278,7 @@
 
 						<div class="col-lg-4 mt-4">
 							<div class="card portfolioContent">
-								<img class="card-img-top portfolio-logo" src="assets/attica-attendance.png" alt="Attica Attendance logo">
+								<div class="portfolio-logo-stage attica-logo-stage"><img class="portfolio-logo" src="assets/attica-attendance.png" alt="Attica Attendance logo"></div>
 								<div class="card-body">
 									<h4 class="card-title">Attica Attendance</h4><br>
 									<div class="text-center">
@@ -261,7 +290,7 @@
 
 						<div class="col-lg-4 mt-4">
 							<div class="card portfolioContent">
-								<img class="card-img-top portfolio-logo" src="assets/monish-tours.png" alt="Monish Tours and Travels logo">
+								<div class="portfolio-logo-stage"><img class="portfolio-logo" src="assets/monish-tours.png" alt="Monish Tours and Travels logo"></div>
 								<div class="card-body">
 									<h4 class="card-title">Monish Tours and Travels</h4><br>
 									<div class="text-center">
@@ -273,7 +302,7 @@
 
 						<div class="col-lg-4 mt-4">
 							<div class="card portfolioContent">
-								<img class="card-img-top portfolio-logo" src="assets/lehkai-housie.png" alt="Lehkai Housie logo">
+								<div class="portfolio-logo-stage"><img class="portfolio-logo lehkai-logo" src="assets/lehkai-housie.png" alt="Lehkai Housie logo"></div>
 								<div class="card-body">
 									<h4 class="card-title">Lehkai Housie</h4><br>
 									<div class="text-center">
@@ -285,7 +314,7 @@
 
 						<div class="col-lg-4 mt-4">
 							<div class="card portfolioContent">
-								<img class="card-img-top portfolio-logo" src="assets/attica-digigold.png" alt="Attica DigiGold logo">
+								<div class="portfolio-logo-stage"><img class="portfolio-logo" src="assets/attica-digigold.png" alt="Attica DigiGold logo"></div>
 								<div class="card-body">
 									<h4 class="card-title">Attica DigiGold</h4><br>
 									<div class="text-center">
@@ -304,31 +333,28 @@
 						<h1 class="text-center">Contact Me</h1>
 						<br><br>
 						
-						<div class="row mt-4">
-							<div class="col-lg-6">
-								<!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-								<div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
-									<div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.77492875466!2d77.3012694531081!3d12.954459531495921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1718186813246!5m2!1sen!2sin" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-									</div>
-									<a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
-									<style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
-									</style>
+						<div class="row mt-4 g-4 align-items-stretch">
+							<div class="col-lg-5">
+								<div class="contact-panel">
+									<span class="section-kicker">Let's build something</span>
+									<h2>Have a project in mind?</h2>
+									<p>Tell me what you are working on. I can help with product development, AI integrations, secure enterprise applications, cloud deployments, and technical consulting.</p>
+									<a class="contact-detail" href="mailto:vinaykarthikmb@gmail.com"><i class="fa-solid fa-envelope"></i><span><small>Email</small>vinaykarthikmb@gmail.com</span></a>
+									<div class="contact-detail"><i class="fa-solid fa-location-dot"></i><span><small>Location</small>Bengaluru, Karnataka</span></div>
+									<a class="contact-detail" href="tel:+919686266994"><i class="fa-solid fa-phone"></i><span><small>Phone</small>+91 96862 66994</span></a>
 								</div>
 							</div>
 							
-							<div class="col-lg-6">
+							<div class="col-lg-7">
 								<!-- form fields -->
-								<form action="https://formsubmit.co/0d4ba1549bcd1c9882c10944adce65c4" method="POST">
-									<input type="text" class="form-control form-control-lg"  name="name" placeholder="Name">
-									<input type="email" class="form-control mt-3" name="email" placeholder="Email">
-									<input type="number" class="form-control mt-3" name="Phone" placeholder="Phone Number">
+								<form class="contact-form" action="https://formsubmit.co/0d4ba1549bcd1c9882c10944adce65c4" method="POST">
+									<input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
+									<input type="email" class="form-control mt-3" name="email" placeholder="Email" required>
+									<input type="tel" class="form-control mt-3" name="Phone" placeholder="Phone Number">
 									<div class="mb-3 mt-3">
-										<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+										<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details" required></textarea>
 									</div>
-									<centeR>
-										<button type="submit" class="btn btn-success mt-3">Contact Me</button>
-									</center>
+									<button type="submit" class="btn btn-success mt-3">Send Message <i class="fa-solid fa-arrow-right"></i></button>
 								</form>
 								
 								
@@ -336,25 +362,15 @@
 							
 						</div>
 						<br><br>
-						<div>
-							<center>
-								<a href="https://github.com/vkvinay580" target="_blank"><i class="fab fa-github fa-2x" style="color: #333333;"></i></a>&ensp;
-								
-								<a href="https://www.instagram.com/vinaykarthik/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></a>&ensp;
-								
-								<a href="mailto:vinaykarthikmb@gmail.com" target="_blank"><i class="fab fa-google fa-2x" style="color: #dd4b39;"></i></a>&ensp;
-								
-								<a href="https://wa.me/919686266994" target="_blank"><i class="fab fa-whatsapp fa-2x" style="color: #25d366;"></i></a>&ensp;
-								
-								<a href="https://www.linkedin.com/in/vinaykarthikmb/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #55acee;"></i></a>&ensp;
-								
-								<a href="https://x.com/vkvinay580" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #55acee;"></i></a>&ensp;
-								
-								<a href="https://www.facebook.com/vinaykarthikmb" target="_blank"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>&ensp;
-								
-								<a href="https://www.youtube.com/channel/UCMVyh0Y1J8rvoIGYXXixmrg" target="_blank"><i class="fab fa-youtube fa-2x" style="color: #ed302f;"></i></a>&ensp;
-								
-							</center>
+						<div class="social-links" aria-label="Social media links">
+							<a href="https://github.com/vkvinay580" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+							<a href="https://www.instagram.com/vinaykarthik/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+							<a href="mailto:vinaykarthikmb@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+							<a href="https://wa.me/919686266994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+							<a href="https://www.linkedin.com/in/vinaykarthikmb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+							<a href="https://x.com/vkvinay580" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+							<a href="https://www.facebook.com/vinaykarthikmb" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+							<a href="https://www.youtube.com/channel/UCMVyh0Y1J8rvoIGYXXixmrg" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
 						</div>
 					</div>
 				</section>
