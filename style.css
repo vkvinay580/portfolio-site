@@ -57,6 +57,20 @@
 .imageAboutPage {
     width: 100%;
 }
+.about-copy {
+    line-height: 1.75;
+    text-align: justify;
+}
+
+.portfolioContent {
+    height: 100%;
+}
+.portfolio-logo {
+    height: 220px;
+    padding: 28px;
+    background: #f8f9fa;
+    object-fit: contain;
+}
 
 /* services section css */
 .servicesText.card {
