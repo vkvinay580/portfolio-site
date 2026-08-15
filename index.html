@@ -87,7 +87,11 @@
 						</div>
 						<BR>
 						<center>
-							<a href="assets/vinay-karthik-mb-resume.pdf" download="Vinay Karthik M B - Resume.pdf" class="btn"><h4>DOWNLOAD RESUME</h4></a>
+							<button type="button" id="resumeDownloadButton" class="resume-download-btn" data-bs-toggle="modal" data-bs-target="#resumeCaptchaModal">
+								<span class="resume-button-icon"><i class="fa-solid fa-file-arrow-down"></i></span>
+								<span><strong>Download Resume</strong><small>PDF · Secure download</small></span>
+								<i class="fa-solid fa-arrow-right resume-button-arrow"></i>
+							</button>
 						</center>
 					</div>
 				</div>
@@ -369,6 +373,36 @@
 						</div>
 					</div>
 				</section>
+				<div class="modal fade captcha-modal" id="resumeCaptchaModal" tabindex="-1" aria-labelledby="resumeCaptchaTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="captcha-title-icon"><i class="fa-solid fa-shield-halved"></i></div>
+								<div>
+									<h2 class="modal-title fs-5" id="resumeCaptchaTitle">Quick security check</h2>
+									<p>Verify you are human to download the resume.</p>
+								</div>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<form id="resumeCaptchaForm" novalidate>
+								<div class="modal-body">
+									<div class="captcha-challenge-row">
+										<div id="captchaChallenge" class="captcha-challenge" aria-label="CAPTCHA challenge"></div>
+										<button type="button" id="refreshCaptcha" class="captcha-refresh" aria-label="Generate a new CAPTCHA" title="New challenge"><i class="fa-solid fa-rotate"></i></button>
+									</div>
+									<label for="captchaAnswer" class="form-label">Enter the characters shown above</label>
+									<input type="text" id="captchaAnswer" class="form-control" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="5" required>
+									<div id="captchaFeedback" class="captcha-feedback" role="status" aria-live="polite"></div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+									<button type="submit" class="captcha-verify-btn"><i class="fa-solid fa-lock-open"></i> Verify &amp; Download</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
 				<!-- footer section-->
 				<footer id="footer">
 					<div class="container-fluid">
