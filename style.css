@@ -125,6 +125,11 @@ footer {
     box-shadow: 0 16px 36px rgba(30, 64, 100, .14);
 }
 .about-copy {
+    padding: 1.75rem 2rem;
+    border: 1px solid rgba(148, 163, 184, .22);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .96);
+    box-shadow: 0 12px 30px rgba(30, 64, 100, .1);
     line-height: 1.75;
     text-align: justify;
 }
@@ -425,6 +430,9 @@ footer {
     .skills-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+    .about-copy {
+        margin-top: 2rem;
+    }
 }
 @media (max-width: 575.98px) {
     .code-pattern-bg {
@@ -454,6 +462,10 @@ footer {
     .contact-panel,
     .contact-form {
         padding: 1.4rem;
+    }
+    .about-copy {
+        padding: 1.25rem;
+        text-align: left;
     }
 }
 /* footer styling */
