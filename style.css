@@ -124,6 +124,24 @@
     max-width: 52%;
     max-height: 112px;
 }
+.dream-logo-stage {
+    position: relative;
+}
+.dream-logo-stage::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #36363c;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #29292f, #17171b);
+}
+.dream-logo-stage .portfolio-logo {
+    z-index: 1;
+    width: 112px;
+    max-width: 52%;
+    max-height: 112px;
+}
 .portfolio-logo {
     display: block;
     width: auto;
