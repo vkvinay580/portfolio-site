@@ -8,8 +8,8 @@
 		<meta name="description" content="Vinay Karthik M B - Professional Portfolio - Freelancer in Bengaluru - Website Design Development Deployment Solutions">
         	<meta name="keywords" content="Vinay Karthik M B - Professional Portfolio - Freelancer in Bengaluru - Website Design Development Deployment Solutions - Java, Python, PHP, HTML, CSS, JavaScript">
         	<meta name="author" content="Vinay Karthik M B">
-		<link rel="stylesheet" href="style.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	</head>
@@ -38,6 +38,9 @@
 							<a class="nav-link" href="#about">About</a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="#story">Story</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="#services">Services</a>
 						</li>
 						<li class="nav-item">
@@ -47,7 +50,13 @@
 							<a class="nav-link" href="#portfolio">Portfolio</a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="#pricing">Pricing</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+						<li class="nav-item theme-toggle-item">
+							<button type="button" id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle color theme"><i class="fa-solid fa-moon"></i></button>
 						</li>
 					</ul>
 					
@@ -69,12 +78,17 @@
 		<!-- about section-->
 		<section id="about">
 			<div class="container mt-4 pt-4">
-				<h1 class="text-center">About Me</h1>
-				<br><br>
+				<div class="editorial-heading text-center">
+					<span><em>Get To Know</em> My Journey</span>
+					<h1>About Me</h1>
+					<p>Engineer, product builder, and problem solver based in Bengaluru.</p>
+				</div>
 				
 				<div class="row mt-4">
-					<div class="col-lg-4">
-						<img src="about.jpg" class= "imageAboutPage" alt="">
+					<div class="col-lg-4 about-portrait-column">
+						<div class="about-portrait-frame">
+							<img src="about.jpg" class="imageAboutPage" alt="Illustration of Vinay Karthik working on a laptop">
+						</div>
 					</div>
 					
 					
@@ -84,24 +98,86 @@
 							<p>I build secure, practical products with <b>PHP, Python, Java, Kotlin, Laravel, the MERN stack, Flutter, AWS, OpenAI APIs, WSO2 Identity Server</b>, and modern DevOps practices. At Attica Gold, I lead engineering delivery, architecture planning, code reviews, hiring, and stakeholder collaboration while developing digital-gold platforms, internal business systems, AI automation, IoT monitoring, and secure SSO/MFA solutions.</p>
 							<p>My work focuses on measurable business impact. An in-house attendance management platform I developed replaced third-party software and reduced annual operating costs by more than <b>₹15 lakh</b>. I have also delivered AI-powered customer detection, voice and transcription tools, mobile applications, payment integrations, HRMS and operations dashboards, and scalable cloud deployments.</p>
 							<p>Previously, I built IAM solutions at Trinity Mobility and delivered web applications, infrastructure, SEO, and automation for freelance clients across hospitality, construction, travel, and entertainment. I hold an <b>MSc in Informatics from the University of Miskolc</b>, where I received the Bronze Medallion of Merit, and a BE in Computer Science and Engineering.</p>
+							<div class="resume-download-wrap">
+								<button type="button" id="resumeDownloadButton" class="resume-download-btn" data-bs-toggle="modal" data-bs-target="#resumeCaptchaModal">
+									<span class="resume-button-icon"><i class="fa-solid fa-file-arrow-down"></i></span>
+									<span><strong>Download Resume</strong><small>PDF · Secure download</small></span>
+									<i class="fa-solid fa-arrow-right resume-button-arrow"></i>
+								</button>
+							</div>
 						</div>
-						<BR>
-						<center>
-							<button type="button" id="resumeDownloadButton" class="resume-download-btn" data-bs-toggle="modal" data-bs-target="#resumeCaptchaModal">
-								<span class="resume-button-icon"><i class="fa-solid fa-file-arrow-down"></i></span>
-								<span><strong>Download Resume</strong><small>PDF · Secure download</small></span>
-								<i class="fa-solid fa-arrow-right resume-button-arrow"></i>
-							</button>
-						</center>
 					</div>
 				</div>
+			</div>
 			</section>
-			<br><br>
 			
-			<!-- services section-->
+		<!-- story section -->
+		<section id="story" class="story-section">
+			<div class="container">
+				<div class="editorial-heading text-center">
+					<span><em>My</em> Story</span>
+					<h1>Education &amp; Experience</h1>
+					<p>A concise view of the learning and work that shaped how I build software.</p>
+				</div>
+				<div class="story-grid">
+					<div class="story-column">
+						<h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+						<details class="story-item" open>
+							<summary>MSc in Informatics <i class="fa-solid fa-minus"></i></summary>
+							<div class="story-details">
+								<strong>University of Miskolc</strong>
+								<span>Master's degree</span>
+								<p>Advanced study in informatics, complemented by the Bronze Medallion of Merit.</p>
+							</div>
+						</details>
+						<details class="story-item">
+							<summary>BE in Computer Science &amp; Engineering <i class="fa-solid fa-plus"></i></summary>
+							<div class="story-details">
+								<strong>Computer Science &amp; Engineering</strong>
+								<span>Bachelor's degree</span>
+								<p>Built a strong foundation in software engineering, systems, algorithms, and product development.</p>
+							</div>
+						</details>
+					</div>
+					<div class="story-column">
+						<h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+						<details class="story-item" open>
+							<summary>Senior Software Engineer <i class="fa-solid fa-minus"></i></summary>
+							<div class="story-details">
+								<strong>Attica Gold</strong>
+								<span>Present</span>
+								<p>Leading engineering delivery, architecture, reviews, hiring, and secure digital platforms spanning gold, AI, IoT, IAM, and internal operations.</p>
+							</div>
+						</details>
+						<details class="story-item">
+							<summary>Identity &amp; Access Management <i class="fa-solid fa-plus"></i></summary>
+							<div class="story-details">
+								<strong>Trinity Mobility</strong>
+								<span>Previous role</span>
+								<p>Built enterprise identity solutions with secure authentication, SSO, MFA, and WSO2 Identity Server.</p>
+							</div>
+						</details>
+						<details class="story-item">
+							<summary>Freelance Product Development <i class="fa-solid fa-plus"></i></summary>
+							<div class="story-details">
+								<strong>Independent clients</strong>
+								<span>Ongoing</span>
+								<p>Delivering web applications, infrastructure, SEO, automation, and deployments for hospitality, construction, travel, and entertainment.</p>
+							</div>
+						</details>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- services section-->
 			<section id="services">
 				<div class="container">
-					<h1 class="text-center">Services</h1>
+					<div class="editorial-heading text-center">
+						<span><em>What I</em> Can Build</span>
+						<h1>Services</h1>
+						<p>Practical engineering support from initial concept through secure production deployment.</p>
+					</div>
 					<div class="row">
 						<div class="col-lg-4 mt-4">
 							<div class="card servicesText">
@@ -181,8 +257,8 @@
 			<!-- skills section -->
 			<section id="skills" class="skills-section">
 				<div class="container">
-					<div class="section-heading text-center">
-						<span class="section-kicker">Technology stack</span>
+					<div class="editorial-heading text-center">
+						<span><em>My</em> Technology Stack</span>
 						<h1>Skills &amp; Tools</h1>
 						<p>Technologies I use to design, build, secure, and deploy production-ready software.</p>
 					</div>
@@ -208,7 +284,11 @@
 			<!-- portfolio section-->
 			<section id="portfolio">
 				<div class="container mt-3">
-					<h1 class="text-center">Portfolio</h1>
+					<div class="editorial-heading text-center">
+						<span><em>Selected</em> Client Work</span>
+						<h1>Portfolio</h1>
+						<p>Digital products, business platforms, and websites delivered across multiple industries.</p>
+					</div>
 					<div class="row">
 						<div class="col-lg-4 mt-4">
 							<div class="card">
@@ -323,37 +403,85 @@
 							</div>
 						</div>
 					</div>
-					<br>
+				</div>
 				</section>
 				
+				<!-- pricing section -->
+				<section id="pricing" class="pricing-section">
+					<div class="container">
+						<div class="editorial-heading text-center">
+							<span><em>My</em> Engagement Options</span>
+							<h1>Pricing</h1>
+							<p>Flexible ways to work together, shaped around your scope, timeline, and technical requirements.</p>
+						</div>
+						<div class="pricing-grid">
+							<article class="price-card">
+								<div class="price-label">Hourly Basis</div>
+								<div class="price"><strong>Custom</strong><span>per hour</span></div>
+								<p class="price-copy">Ideal for focused consulting, troubleshooting, audits, and small improvements.</p>
+								<ul>
+									<li><i class="fa-solid fa-check"></i> Technical consultation</li>
+									<li><i class="fa-solid fa-check"></i> Bug fixes and reviews</li>
+									<li><i class="fa-solid fa-check"></i> Flexible scheduling</li>
+								</ul>
+								<a class="start-project-link" href="#contact" data-project-type="Hourly consulting">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+							</article>
+							<article class="price-card featured">
+								<span class="popular-badge">Popular</span>
+								<div class="price-label">Project Basis</div>
+								<div class="price"><strong>Scoped</strong><span>per project</span></div>
+								<p class="price-copy">Best for end-to-end websites, applications, AI integrations, and platform builds.</p>
+								<ul>
+									<li><i class="fa-solid fa-check"></i> Defined scope and milestones</li>
+									<li><i class="fa-solid fa-check"></i> Development and deployment</li>
+									<li><i class="fa-solid fa-check"></i> Launch support</li>
+								</ul>
+								<a class="start-project-link" href="#contact" data-project-type="Fixed-scope project">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+							</article>
+							<article class="price-card">
+								<div class="price-label">Monthly Retainer</div>
+								<div class="price"><strong>Flexible</strong><span>per month</span></div>
+								<p class="price-copy">Ongoing engineering capacity for teams that need reliable, continuous support.</p>
+								<ul>
+									<li><i class="fa-solid fa-check"></i> Priority engineering support</li>
+									<li><i class="fa-solid fa-check"></i> Continuous improvements</li>
+									<li><i class="fa-solid fa-check"></i> Architecture guidance</li>
+								</ul>
+								<a class="start-project-link" href="#contact" data-project-type="Monthly retainer">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+							</article>
+						</div>
+						<p class="pricing-note">Every engagement is quoted after a short discovery call—no hidden fees or generic packages.</p>
+					</div>
+				</section>
+
 				<!-- contact section-->
 				<section id="contact">
 					<div class="container mt-3 contactContent">
-						<h1 class="text-center">Contact Me</h1>
-						<br><br>
+						<div class="editorial-heading text-center">
+							<span><em>Let's</em> Talk About Ideas</span>
+							<h1>Contact Me</h1>
+							<p>Tell me what you want to build, improve, automate, or secure.</p>
+						</div>
 						
 						<div class="row mt-4 g-4 align-items-stretch">
 							<div class="col-lg-5">
 								<div class="contact-panel">
-									<span class="section-kicker">Let's build something</span>
-									<h2>Have a project in mind?</h2>
-									<p>Tell me what you are working on. I can help with product development, AI integrations, secure enterprise applications, cloud deployments, and technical consulting.</p>
-									<a class="contact-detail" href="mailto:vinaykarthikmb@gmail.com"><i class="fa-solid fa-envelope"></i><span><small>Email</small>vinaykarthikmb@gmail.com</span></a>
-									<div class="contact-detail"><i class="fa-solid fa-location-dot"></i><span><small>Location</small>Bengaluru, Karnataka</span></div>
-									<a class="contact-detail" href="tel:+919686266994"><i class="fa-solid fa-phone"></i><span><small>Phone</small>+91 96862 66994</span></a>
+									<div class="contact-detail"><i class="fa-solid fa-map"></i><span><strong>Address</strong><small>Bengaluru, Karnataka, India</small></span></div>
+									<a class="contact-detail" href="mailto:vinaykarthikmb@gmail.com"><i class="fa-regular fa-envelope"></i><span><strong>Email</strong><small>vinaykarthikmb@gmail.com</small></span></a>
+									<a class="contact-detail" href="tel:+919686266994"><i class="fa-solid fa-mobile-screen-button"></i><span><strong>Phone</strong><small>+91 96862 66994</small></span></a>
 								</div>
 							</div>
 							
 							<div class="col-lg-7">
 								<!-- form fields -->
 								<form class="contact-form" action="https://formsubmit.co/0d4ba1549bcd1c9882c10944adce65c4" method="POST">
-									<input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
-									<input type="email" class="form-control mt-3" name="email" placeholder="Email" required>
-									<input type="tel" class="form-control mt-3" name="Phone" placeholder="Phone Number">
-									<div class="mb-3 mt-3">
-										<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details" required></textarea>
+									<div class="row g-3">
+										<div class="col-md-6"><label for="contactName">Your Full Name <span>*</span></label><input type="text" id="contactName" class="form-control" name="name" required></div>
+										<div class="col-md-6"><label for="contactEmail">Your Email Address <span>*</span></label><input type="email" id="contactEmail" class="form-control" name="email" required></div>
+										<div class="col-12"><label for="contactSubject">Your Subject <span>*</span></label><input type="text" id="contactSubject" class="form-control" name="subject" required></div>
+										<div class="col-12"><label for="comment">Your Message <span>*</span></label><textarea class="form-control" rows="5" id="comment" name="text" required></textarea></div>
 									</div>
-									<button type="submit" class="btn btn-success mt-3">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+									<div class="contact-submit-row"><small><i class="fa-solid fa-lock"></i> Your details stay private.</small><button type="submit" class="contact-submit-btn">Send Message <i class="fa-solid fa-arrow-right"></i></button></div>
 								</form>
 								
 								
