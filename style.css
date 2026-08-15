@@ -161,6 +161,14 @@
     max-width: 52%;
     max-height: 118px;
 }
+.rounded-logo-tile {
+    width: 150px;
+    height: 150px;
+    max-width: 68%;
+    max-height: 150px;
+    border-radius: 18px;
+    object-fit: contain;
+}
 .portfolio-logo {
     display: block;
     width: auto;
