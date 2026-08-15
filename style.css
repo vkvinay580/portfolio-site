@@ -107,7 +107,22 @@
     margin-top: auto;
 }
 .attica-logo-stage {
-    background: linear-gradient(135deg, #7d1018, #bd2029);
+    position: relative;
+    background: #f8f9fa;
+}
+.attica-logo-stage::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #8f101a, #bd2029);
+}
+.attica-logo-stage .portfolio-logo {
+    z-index: 1;
+    width: 112px;
+    max-width: 52%;
+    max-height: 112px;
 }
 .portfolio-logo {
     display: block;
