@@ -75,3 +75,48 @@ captchaForm.addEventListener('submit', (event) => {
         bootstrap.Modal.getInstance(captchaModalElement).hide();
     }, 700);
 });
+
+// Keep the story timeline controls in sync with their expanded state.
+document.querySelectorAll('.story-item').forEach((item) => {
+    const icon = item.querySelector('summary i');
+    const updateIcon = () => {
+        icon.classList.toggle('fa-plus', !item.open);
+        icon.classList.toggle('fa-minus', item.open);
+    };
+    item.addEventListener('toggle', updateIcon);
+    updateIcon();
+});
+
+// Carry the selected pricing model into the contact form.
+const contactSubject = document.getElementById('contactSubject');
+document.querySelectorAll('.start-project-link').forEach((link) => {
+    link.addEventListener('click', () => {
+        contactSubject.value = `Project enquiry: ${link.dataset.projectType}`;
+        window.setTimeout(() => contactSubject.focus(), 450);
+    });
+});
+
+// Reconfirm deep-link positioning after images and fonts finish loading.
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        window.setTimeout(() => document.querySelector(window.location.hash)?.scrollIntoView(), 100);
+    }
+});
+
+// Theme behavior adapted from the selected multiple-page portfolio theme.
+const themeToggle = document.getElementById('themeToggle');
+const preferredTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    const darkMode = theme === 'dark';
+    themeToggle.setAttribute('aria-label', darkMode ? 'Switch to light mode' : 'Switch to dark mode');
+    themeToggle.querySelector('i').className = darkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+}
+
+applyTheme(preferredTheme);
+themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', nextTheme);
+    applyTheme(nextTheme);
+});
