@@ -142,6 +142,25 @@
     max-width: 52%;
     max-height: 112px;
 }
+.bordered-logo-stage {
+    position: relative;
+}
+.bordered-logo-stage::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #d0d5dd;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(16, 24, 40, .06);
+}
+.bordered-logo-stage .portfolio-logo {
+    z-index: 1;
+    width: 118px;
+    max-width: 52%;
+    max-height: 118px;
+}
 .portfolio-logo {
     display: block;
     width: auto;
