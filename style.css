@@ -7,24 +7,24 @@ body {
     background: #f5f8fc;
 }
 .code-pattern-bg {
-    position: absolute;
+    position: fixed;
     z-index: 0;
     inset: 0;
     display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    align-content: space-around;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-content: space-evenly;
     justify-items: center;
-    gap: 2.5rem 4rem;
-    padding: 5rem 3vw 2rem;
+    gap: 1.15rem 1.5rem;
+    padding: 4.5rem 1.5vw 1.5rem;
     overflow: hidden;
     pointer-events: none;
 }
 .code-pattern-bg img {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     object-fit: contain;
     filter: grayscale(1) sepia(1) hue-rotate(145deg) saturate(4);
-    opacity: .22;
+    opacity: .14;
 }
 .code-pattern-bg img:nth-child(3n) { transform: rotate(-12deg); }
 .code-pattern-bg img:nth-child(4n) { transform: rotate(10deg); }
@@ -102,14 +102,12 @@ footer {
 }
 #about,
 #portfolio {
-    background: rgba(255, 255, 255, .86);
+    background: rgba(255, 255, 255, .74);
     backdrop-filter: blur(2px);
 }
 #portfolio {
     overflow: hidden;
-    background:
-        linear-gradient(rgba(246, 252, 255, .78), rgba(246, 252, 255, .78)),
-        linear-gradient(135deg, #eefaff, #fff);
+    background: rgba(246, 252, 255, .72);
 }
 #portfolio > .container {
     position: relative;
@@ -117,13 +115,15 @@ footer {
 }
 #services,
 #contact {
-    background: rgba(247, 250, 253, .82);
+    background: rgba(247, 250, 253, .72);
     backdrop-filter: blur(2px);
 }
 /* about section image css */
 .imageAboutPage {
     width: 100%;
-    border-radius: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 16px 36px rgba(30, 64, 100, .14);
 }
 .about-copy {
@@ -261,7 +261,7 @@ footer {
 .skills-section {
     margin-top: 4rem;
     padding: 5rem 0;
-    background: rgba(241, 247, 252, .88);
+    background: rgba(241, 247, 252, .74);
     backdrop-filter: blur(2px);
 }
 .section-heading {
@@ -419,8 +419,8 @@ footer {
 
 @media (max-width: 991.98px) {
     .code-pattern-bg {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+        gap: 1.25rem;
     }
     .bgimage {
         background-position: 65% center;
@@ -431,9 +431,9 @@ footer {
 }
 @media (max-width: 575.98px) {
     .code-pattern-bg {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1.5rem;
-        padding-inline: 1rem;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+        padding-inline: .75rem;
     }
     .code-pattern-bg img {
         width: 38px;
