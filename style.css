@@ -27,7 +27,59 @@
     height:100vh;
     background: url('heroImage.jpg');
     background-size:cover;
+    background-position: center;
     position:relative;
+    overflow: hidden;
+}
+.bengaluru-marker {
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    left: 79%;
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    color: #fff;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .8));
+    transform: translate(-50%, -100%);
+}
+.marker-pin {
+    position: relative;
+    color: #ff3b30;
+    font-size: 2rem;
+    line-height: 1;
+}
+.marker-pin::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgba(255, 59, 48, .8);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: marker-pulse 2s ease-out infinite;
+}
+.marker-label {
+    padding: .3rem .65rem;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .72);
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+@keyframes marker-pulse {
+    0% { opacity: .9; transform: translate(-50%, -50%) scale(.45); }
+    80%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.55); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marker-pin::before {
+        animation: none;
+    }
 }
 /* text css above hero image*/
 .hero_title {
@@ -37,6 +89,7 @@
     font-size: 2rem;
 }
 .hero-text {
+    z-index: 1;
     text-align: center;
     position: absolute;
     top: 35%;
@@ -243,11 +296,39 @@
 }
 
 @media (max-width: 991.98px) {
+    .bgimage {
+        background-position: 65% center;
+    }
+    .bengaluru-marker {
+        top: 72%;
+        left: 73%;
+    }
     .skills-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 @media (max-width: 575.98px) {
+    .bgimage {
+        background-position: 72% center;
+    }
+    .bengaluru-marker {
+        top: 59%;
+        right: .75rem;
+        left: auto;
+        flex-direction: row-reverse;
+        transform: translateY(-100%);
+    }
+    .marker-label {
+        font-size: .72rem;
+    }
+    .hero_title {
+        font-size: 3rem;
+    }
+    .hero_desc {
+        max-width: 340px;
+        margin-inline: auto;
+        font-size: 1.35rem;
+    }
     .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
