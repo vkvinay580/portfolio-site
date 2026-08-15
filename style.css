@@ -322,6 +322,18 @@ footer {
 #portfolio .card-body .text-center {
     margin-top: auto;
 }
+.portfolio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+.portfolio-link i {
+    font-size: .72em;
+    transition: transform .2s ease;
+}
+.portfolio-link:hover i {
+    transform: translate(2px, -2px);
+}
 .attica-logo-stage {
     position: relative;
     background: #f8f9fa;
