@@ -1988,11 +1988,11 @@ html[data-theme="dark"] #contact > .container {
 .software-solutions-card.servicesText.card {
     min-height: auto;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(13, 166, 120, .1), var(--card) 55%);
+    background: linear-gradient(135deg, rgba(13, 166, 120, .12), var(--theme-surface-solid) 55%);
 }
 .solution-eyebrow {
     margin: 0 0 .35rem;
-    color: #0d8f69;
+    color: var(--accent);
     font-size: .75rem;
     font-weight: 800;
     letter-spacing: .12em;
@@ -2014,9 +2014,10 @@ html[data-theme="dark"] #contact > .container {
     gap: .85rem;
     align-items: flex-start;
     padding: 1rem;
-    border: 1px solid rgba(148, 163, 184, .3);
+    border: 1px solid var(--theme-border);
     border-radius: 14px;
-    background: rgba(255, 255, 255, .58);
+    color: var(--theme-text);
+    background: var(--theme-soft);
 }
 .solution-icon {
     display: grid;
@@ -2035,7 +2036,7 @@ html[data-theme="dark"] #contact > .container {
 }
 .solution-item small {
     margin-top: .3rem;
-    color: #667085;
+    color: var(--theme-muted);
     line-height: 1.45;
 }
 @media (max-width: 767.98px) {
