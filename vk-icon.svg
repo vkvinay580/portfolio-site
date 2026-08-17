@@ -1,3 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text x="10" y="50" font-family="Arial" font-size="40" fill="black">VK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">VK technology logo</title>
+  <desc id="desc">A VK circuit monogram surrounded by symbols for custom software, billing, and reservation systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="116" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/><stop offset="1" stop-color="#05080f"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="27" y1="28" x2="103" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fafc"/><stop offset=".55" stop-color="#cbd5e1"/><stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <rect x="5" y="5" width="118" height="118" rx="27" fill="none" stroke="#334155" stroke-width="2"/>
+  <!-- Three connected product signals: custom code, billing, and reservations. -->
+  <g stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".9">
+    <path d="m23 17-4 4 4 4m7-8 4 4-4 4m-2-10-4 12"/>
+    <path d="M91 15h16v20l-3-2-3 2-3-2-3 2-4-3z"/>
+    <path d="M95 21h8m-8 5h5"/>
+    <rect x="51" y="101" width="26" height="17" rx="3"/>
+    <path d="M51 107h26m-19-9v6m12-6v6m-12 8 4 3 7-7"/>
+  </g>
+  <g fill="#cbd5e1">
+    <circle cx="42" cy="21" r="2"/><circle cx="86" cy="25" r="2"/>
+    <circle cx="45" cy="109" r="2"/><circle cx="83" cy="109" r="2"/>
+  </g>
+  <path d="M42 21h5m34 4h5M45 109h3m32 0h3" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+  <g stroke="url(#signal)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)">
+    <path d="M28 38 47 91 65 38"/><path d="M76 38v53M77 67l25-29M77 67l27 24"/>
+  </g>
+  <g fill="#e2e8f0" stroke="#071018" stroke-width="2">
+    <circle cx="28" cy="38" r="4"/><circle cx="47" cy="91" r="4"/><circle cx="65" cy="38" r="4"/>
+    <circle cx="76" cy="38" r="4"/><circle cx="76" cy="91" r="4"/><circle cx="102" cy="38" r="4"/><circle cx="104" cy="91" r="4"/>
+  </g>
+  <path d="M15 52h8m-8 24h8m90-24h-8m8 24h-8" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+  <circle cx="15" cy="52" r="2" fill="#cbd5e1"/><circle cx="15" cy="76" r="2" fill="#cbd5e1"/>
+  <circle cx="113" cy="52" r="2" fill="#cbd5e1"/><circle cx="113" cy="76" r="2" fill="#cbd5e1"/>
 </svg>

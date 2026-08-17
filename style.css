@@ -1867,6 +1867,42 @@ html[data-theme="dark"] .code-pattern-bg img {
 }
 
 /* Opaque section panels keep the decorative wallpaper out of content. */
+.vk-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .2rem 0 !important;
+    text-decoration: none;
+}
+.vk-brand-logo {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    filter: drop-shadow(0 5px 10px rgba(15, 23, 42, .2));
+    transition: transform .25s ease, filter .25s ease;
+}
+.vk-brand:hover .vk-brand-logo {
+    transform: rotate(-3deg) scale(1.05);
+    filter: drop-shadow(0 7px 14px rgba(100, 116, 139, .3));
+}
+.vk-brand-copy {
+    display: grid;
+    line-height: 1;
+}
+.vk-brand-copy strong {
+    color: var(--theme-text);
+    font-size: 1rem;
+    letter-spacing: .08em;
+}
+.vk-brand-copy small {
+    margin-top: .28rem;
+    color: var(--theme-muted);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: .56rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
 .about-copy {
     min-height: auto !important;
     padding: .25rem 0 0 !important;
@@ -1891,6 +1927,7 @@ html[data-theme="dark"] .code-pattern-bg img {
 #contact {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
+    background: transparent !important;
 }
 #pricing {
     padding-bottom: 1rem !important;
@@ -1944,5 +1981,65 @@ html[data-theme="dark"] #contact > .container {
         width: calc(100% - 1.25rem);
         padding: 1.25rem !important;
         border-radius: 18px;
+    }
+}
+
+/* Featured custom software service */
+.software-solutions-card.servicesText.card {
+    min-height: auto;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(13, 166, 120, .1), var(--card) 55%);
+}
+.solution-eyebrow {
+    margin: 0 0 .35rem;
+    color: #0d8f69;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.solution-intro {
+    max-width: 720px;
+    margin: .75rem auto 1.5rem;
+    text-align: center;
+}
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.solution-item {
+    display: flex;
+    gap: .85rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid rgba(148, 163, 184, .3);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .58);
+}
+.solution-icon {
+    display: grid;
+    flex: 0 0 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 10px;
+    background: #0d8f69;
+    color: #fff;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-weight: 800;
+}
+.solution-item strong,
+.solution-item small {
+    display: block;
+}
+.solution-item small {
+    margin-top: .3rem;
+    color: #667085;
+    line-height: 1.45;
+}
+@media (max-width: 767.98px) {
+    .solution-grid {
+        grid-template-columns: 1fr;
     }
 }
